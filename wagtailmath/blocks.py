@@ -1,13 +1,13 @@
 from django.utils.safestring import mark_safe
 from django.template.loader import render_to_string
 from django.forms import Widget, CharField
-from wagtail.wagtailcore.blocks import FieldBlock
+from wagtail.core.blocks import FieldBlock
 
 class MathJaxWidget(Widget):
     template_name = "wagtailmath/mathjaxwidget.html"
     class Media:
         js = (
-            'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_HTMLorMML',
+            'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML',
             'wagtailmath/js/wagtailmath.js'
         )
 
